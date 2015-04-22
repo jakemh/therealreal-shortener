@@ -1,3 +1,92 @@
-// Place all the styles related to the ShortenedLinks controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "colors";
+
+.form-group { width: 50% }
+
+.center{
+  text-align: center;
+}
+// override bootstrap
+.shortener .form-control.shortened_link_url{
+  width:100%
+}
+
+.shortener{
+  height: 100%;
+  width: 100%;
+}
+.shortener__display-box{
+  background: $trr-gray;
+  height: 100%;
+  width: 100%;
+  padding: 2em;
+
+  input{
+    color: $trr-red !important;
+
+  }
+}
+
+.shortener__table{
+  margin-top: 25px;
+
+    
+}
+
+.shortener__container{
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+.form-inline {
+
+    text-align: center;
+}
+
+.top-bar{
+  font-family: "HelveticaNeue-Med", "Helvetica Neue Medium", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  width: 100%;
+  height: 3em;
+  background: $trr-dark-gray;
+  color: white;
+  text-align: center;
+  font-size: 1em;
+  line-height: 3em;
+}
+
+@media screen and (max-width: 700px) {
+    table {
+        width: 100%;
+    }
+
+    // .borderless td:first-child{
+    //     // border: inherit !important;
+    //     border-top: 2px solid rgba(235,235,235, 1) !important;
+    // }
+
+    tr td:first-child {
+        border-top: 4px dashed rgba(222,222,222, .6)  !important;
+        background: #f0f0f0;
+        font-weight: bold;
+        font-size: 1.3em;
+    }
+
+    .padding{
+      padding: 0 !important;
+    }
+
+    thead {
+      display: none;
+    }
+
+    tr td:first-child {
+        background: #f0f0f0;
+        font-weight: bold;
+        font-size: 1.3em;
+    }
+
+    tbody td {
+        display: block;
+        text-align: center;
+    }
+
+}

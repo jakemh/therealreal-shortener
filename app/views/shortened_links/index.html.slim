@@ -1,5 +1,39 @@
-div class="outer"
+div class="top-bar"
+  == "TheRealReal Link Shortener"
+div class="shortener"
+  
+  div class="shortener__display-box"
 
-    == bootstrap_form_for(@shortened_link) do |f|
-      == f.text_field :url
-      == f.submit "Shorten!"
+        == form_for(@shortened_link, html: {class: "form-inline"}) do |f|
+          .form-group
+
+            .row
+              .col-sm-10
+                == f.text_field :url, label: false, class: "form-control shortened_link_url"
+              .col-sm-2
+                == f.submit "Shorten!", class: "btn btn-default"
+
+  div class="shortener__container"
+    h4 class="center"
+      = "All links"
+      
+    table class="table table-hover shortener__table table-condensed"
+      thead
+        tr
+          th Link 
+          th Added
+          th Shortened
+          th Clicks
+
+      - @shortened_links.each do |link|
+        tr
+          td
+            == link_to link.url, link.url
+          td
+            == formatted_date link.created_at
+          td
+            == link_to link.shortened_url(request.url), link.shortened_url(request.url)
+          td 
+            == "[todo]"
+
+    
