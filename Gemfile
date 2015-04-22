@@ -20,6 +20,11 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
+
+# front-end stuff
+gem 'slim-rails'
+gem 'bootstrap_form'
+
 group :production do
   gem 'rails_12factor'
   gem 'pg'

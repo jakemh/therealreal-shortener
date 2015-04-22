@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+
+  resources :shortened_links, :path => "/"
+  # root :controller => :shortened_links, action: :index
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

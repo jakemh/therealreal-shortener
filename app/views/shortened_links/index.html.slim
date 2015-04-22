@@ -1,0 +1,5 @@
+div class="outer"
+
+    == bootstrap_form_for(@shortened_link) do |f|
+      == f.text_field :url
+      == f.submit "Shorten!"
