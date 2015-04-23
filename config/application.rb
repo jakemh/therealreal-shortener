@@ -24,6 +24,7 @@ module Realreal
     config.autoload_paths << Rails.root.join('app', 'modules', 'conversions')
     config.autoload_paths << Rails.root.join('lib', 'utilities')
     config.assets.paths << Rails.root.join('vendor', 'assets', 'bower_components')
+    config.autoload_paths << Rails.root.join('app', 'services')
 
     config.active_record.raise_in_transactional_callbacks = true
   end

@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150422225036) do
+ActiveRecord::Schema.define(version: 20150423061509) do
+
+  create_table "clicks", force: :cascade do |t|
+    t.integer  "shortened_link_id"
+    t.integer  "user_id"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
 
   create_table "shortened_links", force: :cascade do |t|
     t.string   "encoded_string"

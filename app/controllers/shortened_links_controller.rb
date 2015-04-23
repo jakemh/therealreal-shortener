@@ -6,10 +6,6 @@ class ShortenedLinksController < ApplicationController
     @shortened_link = ShortenedLink.new
   end
 
-  def new
-  
-  end
-
   def create
 
     shortened_link = ShortenedLink.build_from_uri(whitelist[:url])
@@ -31,6 +27,7 @@ class ShortenedLinksController < ApplicationController
       redirect_to shortened_link.url
     else 
       flash[:error] = "Sorry, this link does not exist!"
+      redirect_to [:shortened_links]
     end
   end
 

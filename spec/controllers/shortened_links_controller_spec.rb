@@ -1,6 +1,6 @@
 require 'rails_helper'
-render_views
 RSpec.describe ShortenedLinksController, type: :controller do
+  render_views
 
   let(:shortened_link){ FactoryGirl.create(:shortened_link) }
 

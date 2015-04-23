@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
   resources :shortened_links, :path => "/"
+  resources :shortened_links do 
+    resources :click, shallow: true
+  end
+
   # root :controller => :shortened_links, action: :index
 
   # The priority is based upon order of creation: first created -> highest priority.

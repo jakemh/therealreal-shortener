@@ -33,8 +33,8 @@ div class="shortener"
           td
             == formatted_date link.created_at
           td
-            == link_to link.shortened_url(request.url), link.shortened_url(request.url)
+            == link_to link.shortened_url(request.url),shortened_link_click_index_path(link), method: :post
           td 
-            == "[todo]"
+            == click_count(link)
 
     

@@ -1,5 +1,6 @@
 class ShortenedLink < ActiveRecord::Base
-
+  has_many :clicks
+  
   MIN_SEED = 100000
   DEFAULT_BASE = 32
 
