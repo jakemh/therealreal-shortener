@@ -1,6 +1,8 @@
 require 'rails_helper'
-
+render_views
 RSpec.describe ShortenedLinksController, type: :controller do
+
+  let(:shortened_link){ FactoryGirl.create(:shortened_link) }
 
   describe "GET #index" do
     it "returns http success" do
@@ -9,17 +11,12 @@ RSpec.describe ShortenedLinksController, type: :controller do
     end
   end
 
-  describe "GET #new" do
-    it "returns http success" do
-      get :new
-      expect(response).to have_http_status(:success)
-    end
-  end
-
-  describe "GET #create" do
-    it "returns http success" do
-      get :create
-      expect(response).to have_http_status(:success)
+  describe "POST create" do
+    it "adds a new shortened_link" do
+      start_count = ShortenedLink.all.count
+      post :create, shortened_link: {url: "www.test.com"}
+      end_count = ShortenedLink.all.count
+      expect(end_count).to eq(start_count + 1)
     end
   end
 
