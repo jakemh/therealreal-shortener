@@ -2,7 +2,7 @@ require 'http'
 class ShortenedLinksController < ApplicationController
 
   def index
-    @shortened_links = ShortenedLink.all
+    @shortened_links = ShortenedLink.all.reverse
     @shortened_link = ShortenedLink.new
   end
 
