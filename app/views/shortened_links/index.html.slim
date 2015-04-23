@@ -9,7 +9,7 @@ div class="shortener"
 
             .row
               .col-sm-10
-                == f.text_field :url, label: false, class: "form-control shortened_link_url"
+                == f.text_field :url, label: false, class: "form-control shortened_link_url", placeholder: "Add long link"
               .col-sm-2
                 == f.submit "Shorten!", class: "btn btn-default"
 

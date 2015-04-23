@@ -1,15 +1,16 @@
 @import "colors";
 
-.form-group { width: 50% }
+.form-group { min-width: 50% }
 
 .center{
   text-align: center;
 }
 // override bootstrap
 .shortener .form-control.shortened_link_url{
-  width:100%
-}
+  width:100%;
+  text-align: center;
 
+}
 .shortener{
   height: 100%;
   width: 100%;
